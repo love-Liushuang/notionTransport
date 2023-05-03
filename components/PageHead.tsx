@@ -12,8 +12,8 @@ export const PageHead: React.FC<
     image?: string
     url?: string
   }
-> = ({ site, title, description, pageId, image, url }) => {
-  const rssFeedUrl = `${config.host}/feed`
+> = ({ site, title, description, pageId, image }) => {
+  // const rssFeedUrl = `${config.host}/feed`
 
   title = title ?? site?.name
   description = description ?? site?.description
@@ -35,7 +35,7 @@ export const PageHead: React.FC<
       {site && (
         <>
           <meta property='og:site_name' content={site.name} />
-          <meta property='twitter:domain' content={site.domain} />
+          {/* <meta property='twitter:domain' content={site.domain} /> */}
         </>
       )}
 
@@ -61,20 +61,20 @@ export const PageHead: React.FC<
         <meta name='twitter:card' content='summary' />
       )}
 
-      {url && (
+      {/* {url && (
         <>
           <link rel='canonical' href={url} />
           <meta property='og:url' content={url} />
           <meta property='twitter:url' content={url} />
         </>
-      )}
+      )} */}
 
-      <link
+      {/* <link
         rel='alternate'
         type='application/rss+xml'
         href={rssFeedUrl}
         title={site?.name}
-      />
+      /> */}
 
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />

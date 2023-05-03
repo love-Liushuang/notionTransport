@@ -41,10 +41,7 @@ export const NotionPageHeader: React.FC<{
   if(block && block.properties && block.properties.title) {
     blockDate.properties.title = block && block.properties && block.properties['EOaa'] || block.properties.title
   }
-  console.log('notion----- pageheader', {
-    block:block,
-    blockDate:blockDate,
-  })
+
   if (navigationStyle === 'default') {
     return <Header block={blockDate} />
   }
